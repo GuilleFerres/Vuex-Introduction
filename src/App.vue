@@ -1,15 +1,15 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Counter-num />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { defineAsyncComponent } from 'vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    CounterNum: defineAsyncComponent( () => import('@/components/CounterNum.vue') )
   }
 }
 </script>
